@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mon site</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="relative bg-cover bg-center h-screen" style="background-image: url('imagefond.webp');">
+        <header class="absolute top-0 left-0 w-full bg-opacity-50 bg-gray-900 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-3xl font-bold">Mon Site</h1>
+                <nav class="space-x-4">
+                    <a href="#" class="hover:text-gray-400">Accueil</a>
+                    <a href="#" class="hover:text-gray-400">À propos</a>
+                    <a href="#" class="hover:text-gray-400">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <div class="flex items-center justify-center h-full">
+            <h2 class="text-4xl text-white font-bold">Bienvenue sur mon site</h2>
+        </div>
+        <div class="container mx-auto p-8">
+            <h2 class="text-2xl font-semibold mb-4">The fastest growing consumer application in history.</h2>
+            <p class="text-lg leading-relaxed">
+                OpenAI and ChatGPT have taken the world by storm — in fact, ChatGPT was the fastest-growing consumer application in history after it launched. The newly redesigned OpenAI website and the ChatGPT chat interface are built using Tailwind CSS.
+            </p>
+        </div>
+
+        <main class="container mx-auto p-8">
+            
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-6">Nos Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-2">Développement Web</h3>
+                        <p class="text-gray-700">Nous créons des sites web modernes et réactifs adaptés à vos besoins.</p>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-2">Consultation en IA</h3>
+                        <p class="text-gray-700">Nos experts vous accompagnent dans l'intégration de l'IA dans vos projets.</p>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg p-6">
+                        <h3 class="text-xl font-semibold mb-2">Analyse des Données</h3>
+                        <p class="text-gray-700">Transformez vos données en informations exploitables grâce à nos services d'analyse.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+
+        <footer class="bg-gray-900 text-white py-8">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
+                
+                <div class="flex-shrink-0">
+                    <h2 class="text-2xl font-bold">OpenAI</h2>
+                </div>
+                
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 w-full">
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Research</h3>
+                        <p class="text-sm">Creating safe AGI that benefits all of humanity.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Product</h3>
+                        <p class="text-sm">Pioneering research on the path to AGI.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Developers</h3>
+                        <p class="text-sm">Transforming work and creativity with AI.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">Company</h3>
+                        <p class="text-sm">Join us in shaping the future of technology.</p>
+                    </div>
+                </div>
+                
+                <div class="flex-shrink-0">
+                    <input type="text" placeholder="Search" class="p-2 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+        </footer>
+        
+        
+</body>
+</html>
