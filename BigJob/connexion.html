@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - La Plateforme_</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="./assets/images/logo.png" alt="Logo La Plateforme_" height="70">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/calendrier.html">Prendre RDV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="connexion.html">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="inscription.html">Inscription</a>
+                        </li>
+                        <li class="nav-item admin-only" style="display: none;">
+                            <a class="btn btn-outline-light" href="/pages/admin.html">Administration</a>
+                        </li>
+                        <li class="nav-item moderator-only" style="display: none;">
+                            <a class="btn btn-outline-light" href="/pages/admin.html">Modération</a>
+                        </li>
+                        <li class="nav-item connecte">
+                            <a class="btn btn-outline-light" href="#" onclick="deconnecter()">Déconnexion</a>
+                        </li>
+                        <li class="nav-item connecte">
+                            <span class="nom-utilisateur"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <h2 class="text-center">Connexion</h2>
+        <div class="row">
+            <form class="col-12 col-md-6 offset-md-3" id="connexion-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input id="password" type="password" class="form-control" required>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit" name="action">
+                    Se connecter
+                    <i class="material-icons right">send</i>
+                </button>
+                <p class="text-center mt-3">
+                    Pas encore de compte ? <a href="inscription.html">Inscrivez-vous ici</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="#">Politique de confidentialité</a></li>
+                        <li><a class="text-white" href="#">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email : contact@laplateforme.io</p>
+                    <p>Téléphone : 01 23 45 67 89</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                    <!-- Ajoutez ici des icônes de réseaux sociaux -->
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3">
+            © 2023 La Plateforme_. Tous droits réservés.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="/js/sessionManager.js"></script>
+</body>
+</html>

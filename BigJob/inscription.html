@@ -1,32 +1,132 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Inscription</title>
+    <title>Inscription - La Plateforme_</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
 </head>
 <body>
-    <div class="container mt-5">
-        <h3>Inscription</h3>
-        <form id="signup-form">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" required>
-            </div>
-            <button type="submit" class="btn btn-primary">S'inscrire</button>
-        </form>
-    </div>
+    <!-- Le header sera inséré ici par JavaScript -->
 
-    <script src="./js/inscription.js"></script>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="./assets/images/logo.png" alt="Logo La Plateforme_" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/pages/calendrier.html">Prendre RDV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="connexion.html">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="inscription.html">Inscription</a>
+                        </li>
+                        <li class="nav-item admin-only" style="display: none;">
+                            <a class="btn btn-outline-light" href="/pages/admin.html">Administration</a>
+                        </li>
+                        <li class="nav-item moderator-only" style="display: none;">
+                            <a class="btn btn-outline-light" href="/pages/admin.html">Modération</a>
+                        </li>
+                        <li class="nav-item connecte">
+                            <a class="btn btn-outline-light" href="#" onclick="deconnecter()">Déconnexion</a>
+                        </li>
+                        <li class="nav-item connecte">
+                            <span class="nom-utilisateur text-white"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-5">
+        <h2 class="text-center">Inscription</h2>
+        <div class="row justify-content-center">
+            <form class="col-md-8" id="inscription-form">
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input id="prenom" type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input id="nom" type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" class="form-control" required>
+                    <small class="form-text text-muted">Utilisez votre adresse email de La Plateforme_</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input id="password" type="password" class="form-control" required autocomplete="new-password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirmer le mot de passe</label>
+                    <input id="confirm-password" type="password" class="form-control" required autocomplete="new-password">
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">
+                    S'inscrire
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="#">Politique de confidentialité</a></li>
+                        <li><a class="text-white" href="#">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email : contact@laplateforme.io</p>
+                    <p>Téléphone : 01 23 45 67 89</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Suivez-nous</h5>
+                </div>
+            </div>
+        </div>
+        <div class="text-center bg-primary py-3">
+            © 2023 La Plateforme_. Tous droits réservés.
+        </div>
+    </footer>
+    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/sessionManager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('inscription-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Ici, vous pouvez ajouter la logique de validation et d'envoi du formulaire
+                console.log('Formulaire soumis');
+            });
+        });
+    </script>
 </body>
 </html>
