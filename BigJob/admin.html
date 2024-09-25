@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - La Plateforme_</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/custom-bootstrap.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a href="/" class="navbar-brand">
+                    <img src="./assets/images/logo.png" alt="Logo La Plateforme_" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="/" class="nav-link">Accueil</a></li>
+                        <li class="nav-item"><a href="/pages/calendrier.html" class="nav-link">Prendre RDV</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                        <li class="nav-item deconnecte"><a href="/pages/connexion.html" class="btn btn-outline-light">Connexion</a></li>
+                        <li class="nav-item deconnecte"><a href="/pages/inscription.html" class="btn btn-outline-light">Inscription</a></li>
+                        <li class="nav-item connecte admin-only d-none"><a href="/pages/admin.html" class="btn btn-light">Administration</a></li>
+                        <li class="nav-item connecte moderator-only d-none"><a href="/pages/admin.html" class="btn btn-light">Moderation</a></li>
+                        <li class="nav-item connecte"><a href="#" onclick="deconnecter()" class="btn btn-outline-light">Déconnexion</a></li>
+                        <li class="nav-item connecte"><span class="nav-link text-white nom-utilisateur"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#gestion-utilisateurs" data-toggle="tab">Gestion des utilisateurs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#demandes-reservation" data-toggle="tab">Demandes de réservation</a>
+                    </li>
+                </ul>
+                <div class="tab-content mt-4">
+                    <div id="gestion-utilisateurs" class="tab-pane fade show active">
+                        <h3>Gestion des utilisateurs</h3>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Prénom</th>
+                                    <th>Nom</th>
+                                    <th>Email</th>
+                                    <th>Rôle</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="users-table-body">
+                                <!-- Les données des utilisateurs seront insérées ici -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="demandes-reservation" class="tab-pane fade">
+                        <h3>Demandes de réservation</h3>
+                        <table id="table-demandes-reservation" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID Utilisateur</th>
+                                    <th>Date</th>
+                                    <th>Statut</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Les demandes de réservation seront insérées ici -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <h5>Liens utiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="#">Politique de confidentialité</a></li>
+                        <li><a class="text-white" href="#">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contact</h5>
+                    <p>Email : contact@laplateforme.io</p>
+                    <p>Téléphone : 01 23 45 67 89</p>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5>Suivez-nous</h5>
+                    <!-- Ajoutez ici des icônes de réseaux sociaux -->
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark text-center py-3">
+            © 2023 La Plateforme_. Tous droits réservés.
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/sessionManager.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
